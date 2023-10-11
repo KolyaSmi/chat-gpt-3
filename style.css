@@ -15,6 +15,10 @@
     display: none;
 }
 
+.header_main a {
+    color: white;
+}
+
 .header_inner, .header_main {
     color: white;
     font-size: 18px;
@@ -55,6 +59,7 @@
 }
 
 .btn_dark {
+    cursor: pointer;
     position: relative;
     width: 190px;
     height: 60px;
@@ -66,6 +71,7 @@
 }
 
 .btn_orange {
+    cursor: pointer;
     color: white;
     font-size: 18px;
     border: none;
@@ -75,6 +81,7 @@
 }
 
 .btn_orange_2 {
+    cursor: pointer;
     color: white;
     font-size: 18px;
     border: none;
@@ -84,6 +91,7 @@
 }
 
 .btn {
+    cursor: pointer;
     color: white;
     font-size: 18px;
     border: none;
@@ -125,6 +133,16 @@
     position: relative;
 }
 
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.hero_body {
+    min-width: 700px;
+}
+
 .hero_people_wrapper {
     display: flex;
     align-items: center;
@@ -132,9 +150,7 @@
 }
 
 .hero_image {
-    position: absolute;
-    top: 113px;
-    right: 25px;
+    margin-left: -100px;
 }
 
 .image-iten:nth-child(2) {
@@ -563,7 +579,6 @@ form {
 form input {
     font-size: 20px;
     color: #3D6184;
-    padding-left: 32px;
     width: 456px;
     height: 53px;
 }
@@ -630,12 +645,20 @@ nav ul {
         flex-direction: column;
     }
 
+    form {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 35px;
+    }
+
     form input {
-        width: auto;
+        width: 100%;
     }
 
     .btn_orange_2 {
         border-radius: 5px;
+        width: 100%;
+        margin: 0 30px;
     }
 
     .form_imput_wrapper {
@@ -643,6 +666,7 @@ nav ul {
     }
 
     .big-card-main {
+        align-items: flex-start;
         flex-direction: column;
         grid-gap: 10px;
     }
@@ -693,6 +717,18 @@ nav ul {
         position: relative;
         margin: 0 auto;
     }
+
+    .blog_item_big_info {
+        height: 162px;
+    }
+
+    .hero {
+        display: block;
+    }
+
+    .hero_body {
+        min-width: auto;
+    }
 }
 
 @media (max-width: 550px) {
@@ -725,14 +761,18 @@ nav ul {
 
     form {
         flex-direction: column;
+        align-items: center;
+        padding: 0 35px;
     }
 
     form input {
-        width: auto;
+        width: 100%;
     }
 
     .btn_orange_2 {
         border-radius: 5px;
+        width: 100%;
+        margin: 0 30px;
     }
 
     .form_imput_wrapper {
@@ -775,6 +815,18 @@ nav ul {
 
     .early_access {
         padding: 50px 0 100px 0;
+    }
+
+    .blog_item_big_info {
+        height: 162px;
+    }
+
+    .hero {
+        display: block;
+    }
+
+    .hero_body {
+        min-width: auto;
     }
 }
 
@@ -830,4 +882,12 @@ nav ul {
     .img_blur, .img_blur_2, .img_blur_3 {
         display: none;
     }
+
+    .blog h1 {
+        text-align: center;
+    } 
+}
+
+@media (max-width: 2560px) {
+    
 }
