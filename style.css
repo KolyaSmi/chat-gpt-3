@@ -571,6 +571,63 @@
     color: white;
 }
 
+.more {
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center; /* см. ниже */
+    align-items: center;
+    z-index: 99;
+    display: none;
+    /* Чтобы окно не прилипало к границе
+    браузера установим отступы */
+}
+
+.more__window {
+    background: #fff;
+
+    /* Установим по умолчанию ширину 600px
+    но она будет не больше ширины браузера */
+    width: 200px;
+    max-width: 100%;
+
+    /* Заготовка для будущих анимаций */
+    transition: transform 0.15s ease 0s, opacity 0.15s ease 0s;
+    transform: scale(1);
+    background: #042c54;
+}
+
+.more--active{
+    display: block;
+}
+
+.hmore--active .more__window{
+    transform: scale(1);
+    opacity: 1;
+}
+
+.more__window ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.more__window nav {
+    padding: 20px;
+}
+
+.more__window a {
+    color: white;
+}
+
+.more__window button {
+    margin: 30px 0 0 50px;
+}
+
 form {
     display: flex;
     margin-bottom: 37px;
@@ -852,7 +909,7 @@ nav ul {
         margin: 20px 0; 
     }
 
-    .header_main p {
+    .header_main button {
         display: block;
     }
 

@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
   <head>
+    <script src="./main.js"></script>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8" />
@@ -11,6 +12,31 @@
     <img src="assets/blur-01.png" class="img_blur">
     <img src="assets/blur-02.png" class="img_blur_2">
     <img src="assets/blur-03.png" class="img_blur_3"> 
+
+    <div class="more" id="modalHeader">
+        <div class="more__window">
+            <button data-hystclose class="btn_orange modal-close">Close</button>  
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">What is GPT?</a>
+                    </li>
+                    <li>
+                        <a href="#">OpenAI</a>
+                    </li>
+                    <li>
+                        <a href="#">Case Studies</a>
+                    </li>
+                    <li>
+                        <a href="#">Library</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
 
     <header class="header">
         <div class="header_inner container">
@@ -35,7 +61,7 @@
                         </li>
                     </ul>
                 </nav>
-                <p>More...</p>
+                <button class="btn open-modal">More...</button>
             </div>
             <div class="header_buttons">
                 <button class="btn">Sing in</button>
